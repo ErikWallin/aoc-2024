@@ -112,7 +112,7 @@ func visitedKey(pos, dir C) string {
 }
 
 func main() {
-	submit := true
+	submit := false
 	verbose := true
 	common.Run(Run, 2024, 6, 1, submit, verbose)
 }

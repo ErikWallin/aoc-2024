@@ -36,7 +36,7 @@ func Run(input string) int {
 }
 
 func main() {
-	submit := true
+	submit := false
 	verbose := true
 	common.Run(Run, 2024, 3, 1, submit, verbose)
 }
