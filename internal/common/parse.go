@@ -15,6 +15,14 @@ func ParseIntList(input string, sep string) []int {
 	return list
 }
 
+func ParseDigitList(input string) []int {
+	list := make([]int, len(input))
+	for i, r := range input {
+		list[i] = MustAtoi(string(r))
+	}
+	return list
+}
+
 // Parse input to slice of strings, i.e. []string
 // Works for both csv (sep = ",") and row delimited (sep = "\n")
 func ParseStringList(input string, sep string) []string {

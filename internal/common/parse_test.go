@@ -17,6 +17,17 @@ func TestParseIntList(t *testing.T) {
 	}
 }
 
+func TestParseDigitList(t *testing.T) {
+	var input = `12345`
+	var ints = ParseDigitList(input)
+	if len(ints) != 5 {
+		t.Errorf("ParseDigitList expected len 5, got %d", len(ints))
+	}
+	if ints[1] != 2 {
+		t.Errorf("ParseDigitList expected item 23, got %d", ints[1])
+	}
+}
+
 func TestParseIntCsvList(t *testing.T) {
 	var input = `1,23,45`
 	var ints = ParseIntList(input, ",")
