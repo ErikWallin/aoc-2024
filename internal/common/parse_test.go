@@ -82,6 +82,27 @@ ghi`
 	}
 }
 
+func TestParseDigitListList(t *testing.T) {
+	var input = `123
+345
+567`
+	var digits = ParseDigitListList(input)
+	if len(digits) != 3 {
+		t.Errorf("ParseDigitListList expected len 3, got %d", len(digits))
+	}
+	if len(digits[0]) != 3 {
+		t.Errorf("ParseDigitListList expected len 3, got %d", len(digits[0]))
+	}
+	if digits[2][1] != 6 {
+		t.Errorf("ParseDigitListList expected int 6, got %q", digits[2][1])
+	}
+	if digits[1][1] != 4 {
+		t.Errorf("ParseDigitListList expected int 4, got %q", digits[1][1])
+	}
+}
+
+
+
 func TestParseRuneListListList(t *testing.T) {
 	var input = `abc
 def

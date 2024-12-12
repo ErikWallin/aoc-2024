@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/ErikWallin/aoc-2024/internal/common"
 )
 
@@ -14,13 +12,11 @@ func Run(input string) int {
 			count++
 		}
 	}
-	fmt.Println(count)
 	for _, r := range inp {
 		if isIncreasing(r) {
 			count++
 		}
 	}
-	fmt.Println(count)
 	return count
 }
 

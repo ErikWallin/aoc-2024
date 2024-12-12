@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/ErikWallin/aoc-2024/internal/common"
 )
 
@@ -51,7 +49,7 @@ func Run(input string) int {
 	return sum
 }
 
-func print(ints []int) {
+/*func print(ints []int) {
 	for _, i := range ints {
 		if i == -1 {
 			fmt.Print(".")
@@ -60,7 +58,7 @@ func print(ints []int) {
 		}
 	}
 	fmt.Println()
-}
+}*/
 
 func main() {
 	submit := false

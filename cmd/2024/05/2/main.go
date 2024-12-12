@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"slices"
 	"strings"
 
@@ -19,8 +18,6 @@ func Run(input string) int {
 	for _, r := range common.ParseStringList(sections[1], "\n") {
 		updates = append(updates, common.ParseIntList(r, ","))
 	}
-	fmt.Println(rules)
-	fmt.Println(updates)
 
 	var incorrectUpdates [][]int
 	for _, update := range updates {

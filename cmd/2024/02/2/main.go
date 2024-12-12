@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/ErikWallin/aoc-2024/internal/common"
 )
 
@@ -50,7 +48,6 @@ func Run(input string) int {
 			continue
 		}
 	}
-	fmt.Println(count)
 	return count
 }
 

@@ -38,6 +38,18 @@ func ParseRuneListList(input string) [][]rune {
 	return xys
 }
 
+func ParseDigitListList(input string) [][]int {
+	rows := strings.Split(input, "\n")
+	ys := make([][]int, len(rows))
+	for y, row := range rows {
+    	ys[y] = make([]int, len(row))
+		for x, r := range row {
+			ys[y][x] = MustAtoi(string(r))
+		}
+	}
+	return ys
+}
+
 func ParseRuneListListList(input string) [][][]rune {
 	var xyzs [][][]rune
 	var yzs [][]rune
