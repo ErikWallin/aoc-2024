@@ -117,3 +117,14 @@ func (c C) Rotate45Left() C {
         return C{c.X, 0}
     }
 }
+
+func (c C) ManhattanDistance(other C) int {
+    return absDiffInt(c.X, other.X) + absDiffInt(c.Y, other.Y)
+}
+
+func absDiffInt(x, y int) int {
+    if x < y {
+       return y - x
+    }
+    return x - y
+ }

@@ -51,3 +51,21 @@ func TestRotate45Left(t *testing.T) {
 		t.Errorf("Rotate45Left expected %d, got %d", expected, actual)
 	}
 }
+
+func TestManhattanDistance(t *testing.T) {
+	actual := C{-2, 2}.ManhattanDistance(C{-2, 0})
+	expected := 2
+	if actual != expected {
+		t.Errorf("ManhattanDistance expected %d, got %d", expected, actual)
+	}
+	actual = C{-8, 2}.ManhattanDistance(C{-2, -4})
+	expected = 12
+	if actual != expected {
+		t.Errorf("ManhattanDistance expected %d, got %d", expected, actual)
+	}
+	actual = C{-8, 3}.ManhattanDistance(C{-8, 3})
+	expected = 0
+	if actual != expected {
+		t.Errorf("ManhattanDistance expected %d, got %d", expected, actual)
+	}
+}
