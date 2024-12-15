@@ -52,9 +52,9 @@ func Run(input string) int {
 }
 
 func isIncreasing(r []int) bool {
-	current := r[0]-1
+	current := r[0] - 1
 	for _, i := range r {
-		if i <= current || i > current+3  {
+		if i <= current || i > current+3 {
 			return false
 		}
 		current = i
@@ -63,7 +63,7 @@ func isIncreasing(r []int) bool {
 }
 
 func isDecreasing(r []int) bool {
-	current := r[0]+1
+	current := r[0] + 1
 	for _, i := range r {
 		if i >= current || i < current-3 {
 			return false

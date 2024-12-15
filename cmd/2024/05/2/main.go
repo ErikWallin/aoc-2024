@@ -35,7 +35,7 @@ func Run(input string) int {
 	sum := 0
 	for _, update := range incorrectUpdates {
 		slices.SortFunc(update, compare)
-		sum += update[len(update) / 2]
+		sum += update[len(update)/2]
 	}
 	return sum
 }

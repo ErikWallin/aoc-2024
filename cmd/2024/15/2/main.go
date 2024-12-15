@@ -100,7 +100,7 @@ func push(pos, dir C) {
 		}
 	} else if dir.Y == 0 {
 		push(next, dir)
-			pool[next.Y][next.X] = pool[pos.Y][pos.X]
+		pool[next.Y][next.X] = pool[pos.Y][pos.X]
 	}
 }
 

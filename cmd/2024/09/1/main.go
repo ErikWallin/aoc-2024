@@ -11,7 +11,7 @@ func Run(input string) int {
 	for i, n := range ints {
 		for j := 0; j < n; j++ {
 			if isFile {
-				drive = append(drive, i / 2)
+				drive = append(drive, i/2)
 			} else {
 				drive = append(drive, -1)
 			}

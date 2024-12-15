@@ -15,7 +15,7 @@ func TestRun(t *testing.T) {
 192: 17 8 14
 21037: 9 7 18 13
 292: 11 6 16 20`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

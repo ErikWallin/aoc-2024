@@ -30,16 +30,14 @@ func operate(value int, rest []int) []int {
 		return []int{value}
 	}
 	var res []int
-	add := operate(value + rest[0], rest[1:])
+	add := operate(value+rest[0], rest[1:])
 	res = append(res, add...)
-	multiply := operate(value * rest[0], rest[1:])
+	multiply := operate(value*rest[0], rest[1:])
 	res = append(res, multiply...)
-	concat := operate(value * int(math.Pow10(len(strconv.Itoa(rest[0])))) + rest[0], rest[1:])
+	concat := operate(value*int(math.Pow10(len(strconv.Itoa(rest[0]))))+rest[0], rest[1:])
 	res = append(res, concat...)
 	return res
 }
-
-
 
 func main() {
 	submit := false

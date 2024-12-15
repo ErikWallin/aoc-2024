@@ -18,7 +18,7 @@ p=9,3 v=2,3
 p=7,3 v=-1,2
 p=2,4 v=2,-3
 p=9,5 v=-3,-3`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

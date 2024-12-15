@@ -7,8 +7,6 @@ import (
 	"github.com/ErikWallin/aoc-2024/internal/common"
 )
 
-
-
 func Run(input string) int {
 	sections := strings.Split(input, "\n\n")
 	var rules [][]int
@@ -30,7 +28,7 @@ func Run(input string) int {
 			}
 		}
 		if isOk {
-			sum += update[len(update) / 2]
+			sum += update[len(update)/2]
 		}
 	}
 	return sum

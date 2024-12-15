@@ -21,7 +21,7 @@ Prize: X=7870, Y=6450
 Button A: X+69, Y+23
 Button B: X+27, Y+71
 Prize: X=18641, Y=10279`, 1)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

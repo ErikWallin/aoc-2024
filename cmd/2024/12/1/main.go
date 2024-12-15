@@ -9,7 +9,7 @@ import (
 
 type region struct {
 	plant rune
-	cs []C
+	cs    []C
 }
 
 func (r *region) add(c C) {
@@ -40,9 +40,9 @@ func Run(input string) int {
 	rm = map[C]*region{}
 	for y, row := range runes {
 		for x, p := range row {
-			c := C{X:x, Y:y}
+			c := C{X: x, Y: y}
 			lc := c.Minus(C{1, 0})
-			uc := c.Minus(C{0, 1}); 
+			uc := c.Minus(C{0, 1})
 			if x > 0 && y > 0 && rm[lc].plant == p && rm[uc].plant == p && rm[lc] != rm[uc] {
 				removedRegion := rm[uc]
 				mergedRegion := rm[lc]

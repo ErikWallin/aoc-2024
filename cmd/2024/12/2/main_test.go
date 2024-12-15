@@ -10,9 +10,9 @@ func TestRun(t *testing.T) {
 BBCD
 BBCC
 EEEC`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }
 
 func TestRun2(t *testing.T) {
@@ -22,9 +22,9 @@ OXOXO
 OOOOO
 OXOXO
 OOOOO`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }
 
 func TestRun3(t *testing.T) {
@@ -34,9 +34,9 @@ EXXXX
 EEEEE
 EXXXX
 EEEEE`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }
 
 func TestRun4(t *testing.T) {
@@ -47,9 +47,9 @@ AAABBA
 ABBAAA
 ABBAAA
 AAAAAA`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }
 
 func TestRun5(t *testing.T) {
@@ -64,7 +64,7 @@ VVIIICJJEE
 MIIIIIJJEE
 MIIISIJEEE
 MMMISSJEEE`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

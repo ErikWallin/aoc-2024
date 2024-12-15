@@ -16,7 +16,7 @@ S.S.S.S.S.
 .A.A.A.A..
 M.M.M.M.M.
 ..........`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

@@ -18,9 +18,9 @@ func TestRun(t *testing.T) {
 .........A..
 ............
 ............`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }
 
 func TestRun2(t *testing.T) {
@@ -35,7 +35,7 @@ func TestRun2(t *testing.T) {
 ..........
 ..........
 ..........`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

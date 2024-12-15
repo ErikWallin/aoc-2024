@@ -13,13 +13,13 @@ func (c C) neighbours(lenX, lenY int) []C {
 	if c.x > 0 {
 		ns = append(ns, C{c.x - 1, c.y})
 	}
-	if c.x < lenX - 1 {
+	if c.x < lenX-1 {
 		ns = append(ns, C{c.x + 1, c.y})
 	}
 	if c.y > 0 {
 		ns = append(ns, C{c.x, c.y - 1})
 	}
-	if c.y < lenY - 1 {
+	if c.y < lenY-1 {
 		ns = append(ns, C{c.x, c.y + 1})
 	}
 	return ns

@@ -42,7 +42,7 @@ func ParseDigitListList(input string) [][]int {
 	rows := strings.Split(input, "\n")
 	ys := make([][]int, len(rows))
 	for y, row := range rows {
-    	ys[y] = make([]int, len(row))
+		ys[y] = make([]int, len(row))
 		for x, r := range row {
 			ys[y][x] = MustAtoi(string(r))
 		}

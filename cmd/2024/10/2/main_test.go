@@ -14,7 +14,7 @@ func TestRun(t *testing.T) {
 32019012
 01329801
 10456732`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

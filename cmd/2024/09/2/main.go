@@ -11,7 +11,7 @@ func Run(input string) int {
 	for i, n := range ints {
 		for j := 0; j < n; j++ {
 			if isFile {
-				drive = append(drive, i / 2)
+				drive = append(drive, i/2)
 			} else {
 				drive = append(drive, -1)
 			}
@@ -45,12 +45,12 @@ func Run(input string) int {
 		firstEmpty := -1
 		firstEmptyI := -1
 		for ei, i := range empties {
-			if i + lenP > firstPos {
+			if i+lenP > firstPos {
 				break
 			}
 			succeded := true
 			for j := range lenP {
-				if i != -1 && ei + j < len(empties) && empties[ei + j] == empties[ei] + j {
+				if i != -1 && ei+j < len(empties) && empties[ei+j] == empties[ei]+j {
 					continue
 				}
 				succeded = false
@@ -65,9 +65,9 @@ func Run(input string) int {
 
 		if firstEmpty != -1 && firstEmptyI < firstPos {
 			for i := range lenP {
-				drive[firstEmpty + i] = drive[firstPos + i]
-				drive[firstPos + i] = -1
-				empties[firstEmptyI + i] = -1
+				drive[firstEmpty+i] = drive[firstPos+i]
+				drive[firstPos+i] = -1
+				empties[firstEmptyI+i] = -1
 			}
 			lastPos = firstPos - 1
 		} else {

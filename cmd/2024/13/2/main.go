@@ -34,8 +34,8 @@ func Run(input string, prizeOffset int) int {
 		sol.Solve(matrix, solutionVector)
 		pressedA := int(math.Round(sol.At(0, 0)))
 		pressedB := int(math.Round(sol.At(1, 0)))
-		if pressedA * buttonA.X + pressedB * buttonB.X == prize.X && pressedA * buttonA.Y + pressedB * buttonB.Y == prize.Y {
-			sum += 3 * pressedA + pressedB
+		if pressedA*buttonA.X+pressedB*buttonB.X == prize.X && pressedA*buttonA.Y+pressedB*buttonB.Y == prize.Y {
+			sum += 3*pressedA + pressedB
 		}
 	}
 	return sum

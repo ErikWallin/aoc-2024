@@ -10,7 +10,6 @@ func Check(err error) {
 	}
 }
 
-
 func MustAtoi(s string) int {
 	i, err := strconv.Atoi(s)
 	Check(err)
@@ -28,11 +27,11 @@ func ReverseSlice[T any](in []T) []T {
 }
 
 func ReverseString(s string) string {
-    n := len(s)
-    runes := make([]rune, n)
-    for _, rune := range s {
-        n--
-        runes[n] = rune
-    }
-    return string(runes[n:])
+	n := len(s)
+	runes := make([]rune, n)
+	for _, rune := range s {
+		n--
+		runes[n] = rune
+	}
+	return string(runes[n:])
 }

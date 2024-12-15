@@ -60,7 +60,7 @@ func Run(input string) int {
 			robots[ri].move()
 		}
 		inTree := 0
-		downMiddle := c2d.C{X: (lenX-1)/2, Y: lenY-1}
+		downMiddle := c2d.C{X: (lenX - 1) / 2, Y: lenY - 1}
 		for _, r := range robots {
 			if downMiddle.ManhattanDistance(r.position) < lenY+2 {
 				inTree++
@@ -68,7 +68,7 @@ func Run(input string) int {
 		}
 		if inTree > 460 {
 			print(i+1, robots)
-			return i+1
+			return i + 1
 		}
 	}
 	return 0

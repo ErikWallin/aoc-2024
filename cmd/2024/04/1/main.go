@@ -24,51 +24,51 @@ func Run(input string) int {
 	count := 0
 	for _, start := range starts {
 		// Right
-		if start.x + 3 < xLen {
+		if start.x+3 < xLen {
 			if puzzle[start.y][start.x+1] == 'M' && puzzle[start.y][start.x+2] == 'A' && puzzle[start.y][start.x+3] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Left
-		if start.x - 3 >= 0 {
+		if start.x-3 >= 0 {
 			if puzzle[start.y][start.x-1] == 'M' && puzzle[start.y][start.x-2] == 'A' && puzzle[start.y][start.x-3] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Down
-		if start.y + 3 < yLen {
+		if start.y+3 < yLen {
 			if puzzle[start.y+1][start.x] == 'M' && puzzle[start.y+2][start.x] == 'A' && puzzle[start.y+3][start.x] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Up
-		if start.y - 3 >= 0 {
+		if start.y-3 >= 0 {
 			if puzzle[start.y-1][start.x] == 'M' && puzzle[start.y-2][start.x] == 'A' && puzzle[start.y-3][start.x] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Down Right
-		if start.x + 3 < xLen && start.y + 3 < yLen {
+		if start.x+3 < xLen && start.y+3 < yLen {
 			if puzzle[start.y+1][start.x+1] == 'M' && puzzle[start.y+2][start.x+2] == 'A' && puzzle[start.y+3][start.x+3] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Up Right
-		if start.x + 3 < xLen && start.y -3 >= 0 {
+		if start.x+3 < xLen && start.y-3 >= 0 {
 			if puzzle[start.y-1][start.x+1] == 'M' && puzzle[start.y-2][start.x+2] == 'A' && puzzle[start.y-3][start.x+3] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Up Left
-		if start.x - 3 >= 0 && start.y - 3 >= 0 {
+		if start.x-3 >= 0 && start.y-3 >= 0 {
 			if puzzle[start.y-1][start.x-1] == 'M' && puzzle[start.y-2][start.x-2] == 'A' && puzzle[start.y-3][start.x-3] == 'S' {
-				count ++
+				count++
 			}
 		}
 		// Down Left
-		if start.x - 3 >= 0 && start.y + 3 < yLen {
+		if start.x-3 >= 0 && start.y+3 < yLen {
 			if puzzle[start.y+1][start.x-1] == 'M' && puzzle[start.y+2][start.x-2] == 'A' && puzzle[start.y+3][start.x-3] == 'S' {
-				count ++
+				count++
 			}
 		}
 	}

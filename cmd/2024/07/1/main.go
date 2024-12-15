@@ -27,9 +27,9 @@ func operate(value int, rest []int) []int {
 		return []int{value}
 	}
 	var res []int
-	add := operate(value + rest[0], rest[1:])
+	add := operate(value+rest[0], rest[1:])
 	res = append(res, add...)
-	multiply := operate(value * rest[0], rest[1:])
+	multiply := operate(value*rest[0], rest[1:])
 	res = append(res, multiply...)
 	return res
 }

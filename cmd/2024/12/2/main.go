@@ -9,7 +9,7 @@ import (
 
 type region struct {
 	plant rune
-	cs []C
+	cs    []C
 }
 
 func (r *region) add(c C) {
@@ -60,7 +60,7 @@ func (r region) perimeter() int {
 		return c1.X - c2.X
 	})
 	for i, l := range left {
-		if i == len(left) - 1 {
+		if i == len(left)-1 {
 			break
 		}
 		if slices.Contains(left[i+1:], l.Plus(C{0, 1})) || slices.Contains(left[i+1:], l.Minus(C{0, 1})) {
@@ -68,7 +68,7 @@ func (r region) perimeter() int {
 		}
 	}
 	for i, l := range right {
-		if i == len(right) - 1 {
+		if i == len(right)-1 {
 			break
 		}
 		if slices.Contains(right[i+1:], l.Plus(C{0, 1})) || slices.Contains(right[i+1:], l.Minus(C{0, 1})) {
@@ -76,7 +76,7 @@ func (r region) perimeter() int {
 		}
 	}
 	for i, l := range up {
-		if i == len(up) - 1 {
+		if i == len(up)-1 {
 			break
 		}
 		if slices.Contains(up[i+1:], l.Plus(C{1, 0})) || slices.Contains(up[i+1:], l.Minus(C{1, 0})) {
@@ -84,7 +84,7 @@ func (r region) perimeter() int {
 		}
 	}
 	for i, l := range down {
-		if i == len(down) - 1 {
+		if i == len(down)-1 {
 			break
 		}
 		if slices.Contains(down[i+1:], l.Plus(C{1, 0})) || slices.Contains(down[i+1:], l.Minus(C{1, 0})) {
@@ -102,9 +102,9 @@ func Run(input string) int {
 	rm = map[C]*region{}
 	for y, row := range runes {
 		for x, p := range row {
-			c := C{X:x, Y:y}
+			c := C{X: x, Y: y}
 			lc := c.Minus(C{1, 0})
-			uc := c.Minus(C{0, 1}); 
+			uc := c.Minus(C{0, 1})
 			if x > 0 && y > 0 && rm[lc].plant == p && rm[uc].plant == p && rm[lc] != rm[uc] {
 				removedRegion := rm[uc]
 				mergedRegion := rm[lc]

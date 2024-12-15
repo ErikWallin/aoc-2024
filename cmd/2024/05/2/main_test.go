@@ -34,7 +34,7 @@ func TestRun(t *testing.T) {
 75,97,47,61,53
 61,13,29
 97,13,75,29,47`)
-    if got != expected {
-        t.Errorf("Run = %d; expected %d", got, expected)
-    }
+	if got != expected {
+		t.Errorf("Run = %d; expected %d", got, expected)
+	}
 }

@@ -101,8 +101,6 @@ func TestParseDigitListList(t *testing.T) {
 	}
 }
 
-
-
 func TestParseRuneListListList(t *testing.T) {
 	var input = `abc
 def
@@ -128,7 +126,6 @@ ghi
 		t.Errorf("ParseRuneListList expected rune 4, got %q", runes[1][1][0])
 	}
 }
-
 
 func TestParseIntListList(t *testing.T) {
 	var input = `2   5
