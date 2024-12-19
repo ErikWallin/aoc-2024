@@ -74,7 +74,6 @@ func cdv() {
 	p += 2
 }
 
-
 func Run(input string) int {
 	sections := common.ParseStringList(input, "\n\n")
 	r, _ := strings.CutPrefix(strings.Split(sections[0], "\n")[0], "Register A: ")
@@ -87,7 +86,6 @@ func Run(input string) int {
 	program = common.ParseIntList(r, ",")
 	p = 0
 	output = []int{}
-
 	for p < len(program) {
 		if program[p] == 0 {
 			adv()
@@ -109,7 +107,6 @@ func Run(input string) int {
 			panic(fmt.Sprint("op", program[p]))
 		}
 	}
-
 	for i, o := range output {
 		fmt.Print(o)
 		if i < len(output) - 1 {
@@ -117,12 +114,11 @@ func Run(input string) int {
 		}
 	}
 	fmt.Println()
-
 	return 0
 }
 
 func main() {
-	submit := true
+	submit := false
 	verbose := true
 	common.Run(Run, 2024, 17, 1, submit, verbose)
 }
