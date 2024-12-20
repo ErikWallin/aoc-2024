@@ -8,10 +8,10 @@ import (
 )
 
 type Score struct {
-	value int
-	position C
+	value     int
+	position  C
 	direction C
-	paths map[C]bool
+	paths     map[C]bool
 }
 
 func (s Score) key() string {
@@ -74,7 +74,7 @@ func Run(input string) int {
 				} else if !ok || next.value == previousScore.value {
 					for previousPathItem := range previousScore.paths {
 						next.paths[previousPathItem] = true
-					}                                                                                                                                                     
+					}
 					records[next.key()] = next
 					nextRound = append(nextRound, next)
 				}

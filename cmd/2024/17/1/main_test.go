@@ -4,8 +4,6 @@ import (
 	"testing"
 )
 
-
-
 func TestRun(t *testing.T) {
 	expected := 0
 	got := Run(`Register A: 729

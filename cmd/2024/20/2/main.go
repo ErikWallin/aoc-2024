@@ -30,9 +30,7 @@ func Run(input string, save int) int {
 
 	trackWithoutCheat := []C{start}
 	current := start
-	t := 0
 	for current != end {
-		t++
 		for _, d := range dir {
 			next := current.Plus(d)
 			if slices.Contains(trackWithoutCheat, next) || next.X < 0 || next.Y < 0 || next.X >= len(f[0]) || next.Y >= len(f) || f[next.Y][next.X] == '#' {
@@ -45,9 +43,10 @@ func Run(input string, save int) int {
 	}
 
 	count := 0
-	for t1, c1 := range trackWithoutCheat {
-		for t2, c2 := range trackWithoutCheat[t1+1:] {
-			if c1.ManhattanDistance(c2) <= 20 && t2+1 - c1.ManhattanDistance(c2) >= save {
+	for t, c1 := range trackWithoutCheat {
+		for timeDiff, c2 := range trackWithoutCheat[t+1:] {
+			distance := c1.ManhattanDistance(c2)
+			if distance <= 20 && timeDiff+1-distance >= save {
 				count++
 			}
 		}

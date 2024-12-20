@@ -13,7 +13,6 @@ var program []int
 var p int
 var output []int
 
-
 func comboValue(combo int) int {
 	if combo <= 3 {
 		return combo
@@ -58,7 +57,7 @@ func bxc() {
 }
 
 func out() {
-	output = append(output, comboValue(program[p+1]) % 8)
+	output = append(output, comboValue(program[p+1])%8)
 	p += 2
 }
 
@@ -74,7 +73,6 @@ func cdv() {
 	p += 2
 }
 
-
 func Run(input string) int {
 	sections := common.ParseStringList(input, "\n\n")
 	r, _ := strings.CutPrefix(strings.Split(sections[0], "\n")[0], "Register A: ")
@@ -88,7 +86,6 @@ func Run(input string) int {
 	r, _ = strings.CutPrefix(sections[1], "Program: ")
 	program = common.ParseIntList(r, ",")
 
-
 	//a := 5
 	//a := 61
 	//a := 3773
@@ -100,7 +97,7 @@ func Run(input string) int {
 		register[0] = a
 		register[1] = register1Origin
 		register[2] = register2Origin
-		
+
 		for p < len(program) && len(output) <= len(program) {
 			if program[p] == 0 {
 				adv()

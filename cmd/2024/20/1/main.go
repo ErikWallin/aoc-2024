@@ -44,7 +44,7 @@ func Run(input string, save int) int {
 				if np.X >= 0 && np.Y >= 0 && np.X < len(f[0]) && np.Y < len(f) {
 					if f[np.Y][np.X] == '#' {
 						if cs.cheat < 1 {
-							next = append(next, score{np, cs.c, cs.cheat+1})
+							next = append(next, score{np, cs.c, cs.cheat + 1})
 						}
 					} else if f[np.Y][np.X] == 'E' {
 						if cs.cheat == 0 && timeWithoutCheat == -1 {
@@ -60,7 +60,7 @@ func Run(input string, save int) int {
 		if timeWithoutCheat != -1 {
 			count := 0
 			for _, fs := range finalScores {
-				if fs <= timeWithoutCheat - save {
+				if fs <= timeWithoutCheat-save {
 					count++
 				}
 			}
@@ -72,8 +72,8 @@ func Run(input string, save int) int {
 }
 
 type score struct {
-	c C
-	p C
+	c     C
+	p     C
 	cheat int
 }
 

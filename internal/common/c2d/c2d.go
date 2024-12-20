@@ -133,14 +133,14 @@ func (c C) Truncate() C {
 	var x, y int
 	if c.X > 0 {
 		x = 1
-	} else if c.X < 0{
+	} else if c.X < 0 {
 		x = -1
 	} else {
 		x = 0
 	}
 	if c.Y > 0 {
 		y = 1
-	} else if c.Y < 0{
+	} else if c.Y < 0 {
 		y = -1
 	} else {
 		y = 0

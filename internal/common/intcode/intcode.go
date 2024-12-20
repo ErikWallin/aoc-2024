@@ -6,10 +6,10 @@ import (
 )
 
 type IntCodeComputer struct {
-	Program []int
-	Register [3]int
+	Program        []int
+	Register       [3]int
 	ProgramPointer int
-	Output []int
+	Output         []int
 }
 
 func NewIntCodeComputer(program []int) IntCodeComputer {
@@ -45,7 +45,6 @@ func (ic *IntCodeComputer) Run() {
 		}
 	}
 }
-
 
 func (ic *IntCodeComputer) comboValue(combo int) int {
 	if combo <= 3 {
@@ -91,7 +90,7 @@ func (ic *IntCodeComputer) bxc() {
 }
 
 func (ic *IntCodeComputer) out() {
-	ic.Output = append(ic.Output, ic.comboValue(ic.Program[ic.ProgramPointer+1]) % 8)
+	ic.Output = append(ic.Output, ic.comboValue(ic.Program[ic.ProgramPointer+1])%8)
 	ic.ProgramPointer += 2
 }
 

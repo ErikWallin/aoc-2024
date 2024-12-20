@@ -1,8 +1,8 @@
 package main
 
 import (
-	"testing"
 	. "github.com/ErikWallin/aoc-2024/internal/common/c2d"
+	"testing"
 )
 
 func TestRun(t *testing.T) {

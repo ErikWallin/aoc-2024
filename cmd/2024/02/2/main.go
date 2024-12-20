@@ -13,9 +13,9 @@ func Run(input string) int {
 			continue
 		}
 		isSafe := false
-		for ri, _ := range r {
+		for ri := range r {
 			var rMod []int
-			for i, _ := range r {
+			for i := range r {
 				if i != ri {
 					rMod = append(rMod, r[i])
 				}
@@ -32,9 +32,9 @@ func Run(input string) int {
 			count++
 			continue
 		}
-		for ri, _ := range r {
+		for ri := range r {
 			var rMod []int
-			for i, _ := range r {
+			for i := range r {
 				if i != ri {
 					rMod = append(rMod, r[i])
 				}

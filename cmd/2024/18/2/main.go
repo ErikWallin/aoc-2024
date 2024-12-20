@@ -27,8 +27,8 @@ func Run(input string, end C) int {
 	f := 382
 	for {
 		f++
-		visited := map[C]int{C{0, 0}: 0}
-		current := []C{C{0, 0}}
+		visited := map[C]int{{0, 0}: 0}
+		current := []C{{0, 0}}
 		if f >= len(falling) {
 			break
 		}
@@ -59,12 +59,12 @@ func Run(input string, end C) int {
 			current = next
 		}
 		if !success {
-			lastCorrupted := corrupted[len(corrupted) - 1]
+			lastCorrupted := corrupted[len(corrupted)-1]
 			result = fmt.Sprintf("%d,%d", lastCorrupted.X, lastCorrupted.Y)
 			break
 		}
 	}
-	
+
 	fmt.Println("Result", result)
 	return 0
 }

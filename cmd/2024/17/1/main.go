@@ -13,7 +13,6 @@ var program []int
 var p int
 var output []int
 
-
 func comboValue(combo int) int {
 	if combo <= 3 {
 		return combo
@@ -58,7 +57,7 @@ func bxc() {
 }
 
 func out() {
-	output = append(output, comboValue(program[p+1]) % 8)
+	output = append(output, comboValue(program[p+1])%8)
 	p += 2
 }
 
@@ -109,7 +108,7 @@ func Run(input string) int {
 	}
 	for i, o := range output {
 		fmt.Print(o)
-		if i < len(output) - 1 {
+		if i < len(output)-1 {
 			fmt.Print(",")
 		}
 	}

@@ -23,8 +23,8 @@ func Run(input string, end C, fallen int) int {
 		}
 		falling = append(falling, C{common.MustAtoi(strings.Split(r, ",")[0]), common.MustAtoi(strings.Split(r, ",")[1])})
 	}
-	visited := map[C]int{C{0, 0}: 0}
-	current := []C{C{0, 0}}
+	visited := map[C]int{{0, 0}: 0}
+	current := []C{{0, 0}}
 	t := 0
 	for len(current) > 0 {
 		t++

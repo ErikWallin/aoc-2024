@@ -8,8 +8,8 @@ import (
 )
 
 type Score struct {
-	value int
-	position C
+	value     int
+	position  C
 	direction C
 }
 
