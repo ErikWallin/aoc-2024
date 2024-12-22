@@ -170,7 +170,7 @@ func getSequence(positions map[rune]C, start, end rune) []string {
 	}
 	var res []string
 
-	// Traverse and skip hope paths
+	// Traverse and skip hole paths
 	current := startC
 	success := true
 	for _, d := range dirs {
