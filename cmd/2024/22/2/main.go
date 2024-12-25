@@ -6,7 +6,7 @@ import (
 
 func Run(input string) int {
 	secrets := common.ParseIntList(input, "\n")
-	
+
 	// map of sequence-key to map of secret-index to price
 	var prices map[int]map[int]int = map[int]map[int]int{}
 
@@ -60,11 +60,11 @@ func secret(previous int) (int, int) {
 	secret = secret % 16777216
 	secret = (secret * 2048) ^ secret
 	secret = secret % 16777216
-	return secret, secret % 10 - previous % 10
+	return secret, secret%10 - previous%10
 }
 
 func sequenceKey(s []int) int {
-	return s[0] * 10000000 + s[1] * 10000 + s[2] * 100 + s[3]
+	return s[0]*10000000 + s[1]*10000 + s[2]*100 + s[3]
 }
 
 func main() {

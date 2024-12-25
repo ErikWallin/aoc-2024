@@ -15,10 +15,10 @@ var ys []string
 var zs []string
 
 type gate struct {
-	input1 string
-	input2 string
+	input1    string
+	input2    string
 	operation string
-	output string
+	output    string
 }
 
 func (g gate) process() bool {

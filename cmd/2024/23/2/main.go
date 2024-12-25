@@ -52,7 +52,7 @@ func RunPassword(input string) string {
 	}
 
 	for _, p := range passwords {
-		length := (strings.LastIndex(p, ",") + 1) / 3 + 1
+		length := (strings.LastIndex(p, ",")+1)/3 + 1
 		if occurances[p] == length {
 			fmt.Println(p)
 			return p
@@ -78,7 +78,7 @@ func combinations(nodes []string, amount int) [][]string {
 			break
 		}
 		rest := nodes[i+1:]
-		restCombinations := combinations(rest, amount - 1)
+		restCombinations := combinations(rest, amount-1)
 		for _, rc := range restCombinations {
 			combination := []string{n}
 			combination = append(combination, rc...)
